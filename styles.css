@@ -20,6 +20,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 650px;
+    /* height: auto; */
 }
 
 a {
@@ -221,6 +222,7 @@ span {
 #about-page {
     background-color: #1A1E23;
     height: 650px;
+    /* height: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +231,8 @@ span {
 #about-info {
     display: flex;
     flex-direction: column;
-    height: 450px;
+    /* height: 450px; */
+    height: auto;
     /* background-color: azure; */
 }
 
@@ -276,7 +279,48 @@ span {
 }
 
 #about-image {
-    width: auto;
-    height: 450px;
+    width: 65%;
+    /* height: 450px; */
+    height: auto;
     border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 700px){
+
+    #about-page {
+        height: auto;
+    }
+
+    #home-page {
+        height: auto;
+    }
+
+    #about-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about-image {
+        width: 80%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    #home-content-body {
+        display: flex;
+        /* background-color: pink; */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #about-info-title {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        /* background-color: bisque; */
+    }
+    
 }
