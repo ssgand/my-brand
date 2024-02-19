@@ -17,7 +17,11 @@ h1, h3, h2 {
 
 a {
     text-decoration: none;
-    color: white
+    color: white;
+}
+
+span {
+    color: #12F7D6;
 }
 
 img {
@@ -29,7 +33,7 @@ input {
     outline: none;
 }
 
-/* home page styles */
+/* home page */
 
 #home-page {
     background-color: #292F36;
@@ -43,29 +47,24 @@ input {
 #home-header {
     flex: 0.5;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 0px 0px 0px;
+    /* padding: 5px 40px; */
     /* background-color: bisque; */
 }
 
 #home1 {
-    flex: 2;
     display: flex;
-    padding-left: 40px;
+    justify-content: center;
     /* background-color: blue; */
 }
 
-span {
-    color: #12F7D6;
-}
-
 #home2 {
-    flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-color: grey; */
+    background-color: grey;
 }
 
 #home-body {
@@ -249,6 +248,7 @@ span {
     /* height: 450px; */
     height: auto;
     /* background-color: azure; */
+    gap: 45px;
 }
 
 #about-info-content {
@@ -448,7 +448,7 @@ span {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #1A1E23;
+    background-color: #111316;
     opacity: 0.9;
 }
 
@@ -547,8 +547,12 @@ span {
     border-bottom: 1px solid white;
 }
 
+#blogs-image-div {
+    width: 30%
+}
+
 #blogs-image {
-    width: 20%;
+    width: 100%;
     height: auto;
 }
 
@@ -697,6 +701,7 @@ span {
     width: 99%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5px 0px;
     /* background-color: aliceblue; */
 }
@@ -713,12 +718,43 @@ span {
 
 @media only screen and (max-width: 700px){
 
-    #about-page {
+    #home-page {
         height: auto;
     }
 
-    #home-page {
+    #home-header {
+        font-size: 12px;
+    }
+
+    #home1 {
+        width: fit-content;
+    }
+
+    #home2 input {
+        width: 50%;
+        /* justify-content: flex-end; */
+
+    }
+
+    #home-content-body {
+        gap: 20px;
+    }
+
+    #home-content-sidepanel {
+        justify-content: center;
+        /* background-color: #0C73B8; */
+    }
+    
+    #home-content-body {
+        display: flex;
+        /* background-color: pink; */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #about-page {
         height: auto;
+        padding: 20px 0px;
     }
 
     #about-div {
@@ -731,13 +767,6 @@ span {
         height: auto;
         border-radius: 20px;
     }
-    
-    #home-content-body {
-        display: flex;
-        /* background-color: pink; */
-        width: 100%;
-        flex-direction: column;
-    }
 
     #about-info-title {
         flex: 1;
@@ -747,5 +776,41 @@ span {
         color: white;
         /* background-color: bisque; */
     }
+
+    #skills-transparent {
+        padding: 20px 0px;
+    }
+
+    #skills-lang {
+        flex-direction: column;
+    }
+
+    #skills-div {
+        gap: 10px;
+    }
+
+    #skills-dev {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #blogs-page {
+        padding: 25px 0px;
+    }
+
+    #blogs-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px
+    }
+
+    #blogs-image {
+        width: 100%;
+        height: auto;
+    }
     
+    #contact-footer {
+        font-size: 8px;
+    }
 }
