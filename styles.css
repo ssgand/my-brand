@@ -31,6 +31,7 @@ img {
 
 input {
     outline: none;
+    border: 0px;
 }
 
 /* home page */
@@ -55,16 +56,28 @@ input {
 }
 
 #home1 {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding:  0px 5%;
     /* background-color: blue; */
 }
 
 #home2 {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: grey;
+    /* background-color: grey; */
+}
+
+#home-header-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 20px;
+    color: black
 }
 
 #home-body {
@@ -108,8 +121,9 @@ input {
 
 #home-content-title {
     color: #98FAEC;
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 20px 0px;
     font-size: 60px;
+    /* background-color: darkkhaki; */
 }
 
 #home-content-mid {
@@ -117,7 +131,7 @@ input {
     border-top: 4px solid #12F7D6;
     border-top-left-radius: 130px;
     border-bottom-right-radius: 130px;
-    width: 80%;
+    width: 280px;
     height: auto;
     /* background-color: #12F7D6; */
 }
@@ -191,16 +205,24 @@ input {
 
 #home-description-title {
     font-size: 35px;
+    /* background-color: cadetblue; */
 }
 
 #home-content1 {
     flex: 1.5;
     /* background-color: rgb(255, 240, 251); */
+    display: flex;
+    align-items: flex-start;
 }
 
 #home-content2 {
     /* background-color: azure; */
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5%;
 }
 
 #home-content-sidepanel {
@@ -448,7 +470,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #111316;
+    background-color: #1A1E23;
     opacity: 0.9;
 }
 
@@ -572,6 +594,7 @@ input {
 #blogs-content-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #blogs-footer1 {
@@ -717,7 +740,6 @@ input {
 
 
 @media only screen and (max-width: 700px){
-
     #home-page {
         height: auto;
     }
@@ -731,13 +753,13 @@ input {
     }
 
     #home2 input {
-        width: 50%;
+        gap: 5px;
         /* justify-content: flex-end; */
 
     }
 
-    #home-content-body {
-        gap: 20px;
+    #home-content {
+        justify-content: center;
     }
 
     #home-content-sidepanel {
@@ -749,7 +771,22 @@ input {
         display: flex;
         /* background-color: pink; */
         width: 100%;
+        gap: 20px;
         flex-direction: column;
+    }
+
+    #home-content1 {
+        justify-content: center;
+    }
+
+    #home-content2 {
+        align-items: center;
+        padding: 0px 5%;
+        /* gap: 10px; */
+    }
+
+    #home-content2 p {
+        font-size: 12px;
     }
 
     #about-page {
