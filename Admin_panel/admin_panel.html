@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./admin_panel.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d5bfaad316.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tiny.cloud/1/uq8imzap4t8unmlfkx9xvmaalxihonau8s71si1u9ng8ze9u/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="sidepanel">
+            <div id="sidepanel-image-div">
+                <!-- <img src="../assets/20.02.2024_21.49.30_REC.png" alt="" id="admin-image"> -->
+                <p id="admin">Admin</p>
+            </div>
+            <div id="sidepanel-list">
+                <button class="sidepanel-buttons" onclick="activateContent()">
+                    <i class="material-symbols-outlined">dashboard</i>
+                    <p id="dash">Dashboard</p>
+                </button>
+                <button class="sidepanel-buttons" onclick="activateBlogs()">
+                    <i class="fa-regular fa-message"></i>
+                    <p id="blog-word">Blogs</p>
+                </button>
+                <button class="sidepanel-buttons" onclick="activateQuerries()">
+                    <i class="material-symbols-outlined">speaker_notes</i>
+                    <p id="users">Querries</p>
+                </button>
+                <!-- <button class="sidepanel-buttons">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <p id="users">Users</p>
+                </button> -->
+            </div>
+        </div>
+        <div id="main-div">
+
+            <div id="header">
+                <div id="header-icon1" class="header-icons">
+                    <a onclick="onMenuClick()"><i class="fa-solid fa-bars" id="menu"></i></a> <!-- menu -->
+                    <div id="line"></div> <!-- line div -->
+                    <a><i class="fa-solid fa-magnifying-glass"></i></a> <!-- search -->
+                    <input type="text" placeholder="search...">
+                </div>
+                <div id="header-icon2" class="header-icons">
+                    <button class="header-button"><i class="fa-solid fa-gear"></i></button> <!-- settings -->
+                    <button class="header-button"><i class="fa-solid fa-sliders"></i></button> <!-- settings -->
+                    <button id="dropdown" class="header-button"><i class="fa-solid fa-ellipsis-vertical"></i></button> <!-- settings -->
+                    <!-- <i class="material-symbols-outlined">apps</i> -->
+                </div>
+            </div>
+
+            <div id="content">
+
+                <div id="content-feedback">
+                    <div class="content-ind-feedback">
+                        <div class="feedback">
+                            <i class="material-symbols-outlined">speaker_notes</i>
+                            <p>Blogs</p>
+                        </div>
+                        <div class="count">
+                            <p>94</p>
+                        </div>
+                    </div>
+                    <div class="content-ind-feedback">
+                        <div class="feedback">
+                            <i class="material-symbols-outlined"> thumb_up</i>
+                            <p>Likes</p>
+                        </div>
+                        <div class="count">
+                            <p>140</p>
+                        </div>
+                    </div>
+                    <div class="content-ind-feedback">
+                        <div class="feedback">
+                            <i class="fa-regular fa-comments"></i>
+                            <p>Comments</p>
+                        </div>
+                        <div class="count">
+                            <p>32</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chart-div">
+                    <canvas id="chart"></canvas>
+                </div>
+
+            </div>
+
+            
+            <div id="querries">
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+                <div id="one-querry">
+                    <div id="info">
+                        <img id="info-img" src="../assets/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg" alt="">
+                        <div id="info-content">
+                            <p id="sender-name">John Connor</p>
+                            <p id="first-words">Hello there...</p>
+                        </div>
+                    </div>
+                    <div id="messages">1</div>
+                </div>
+
+            </div>
+
+            <div id="blogs">
+                <div id="blogs-header" class="blogsss">
+                    <p>Title</p>
+                    <p>Creation_date</p>
+                    <p>Likes</p>
+                    <p>Comments</p>
+                    <p>Action</p>
+                </div>
+
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+                
+                <div id="blogsss" class="blogsss">
+                    <p id="blog-title">Lorem ipsum</p>
+                    <p id="blog-creation">05.09.2023</p>
+                    <p id="blog-likes">25</p>
+                    <p id="blog-comments">9</p>
+                    <div id="querry-icons">
+                    <i class="fa-solid fa-pen" id="edit"></i>
+                    <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="new-blog">
+                <div id="blog-inner-div">
+                    <div class="input">
+                        <p>Image</p>
+                        <input type="file" id="pic-input">
+                    </div>
+                    <div class="input">
+                        <p>Title</p>
+                        <input type="text">
+                    </div>
+                    <div id="input">
+                        <p>Content</p>
+                        <textarea name="textarea" id="default" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src="./admin_panel.js"></script>
+</body>
+</html>
