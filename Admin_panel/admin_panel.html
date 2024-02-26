@@ -18,7 +18,7 @@
                 <p id="admin">Admin</p>
             </div>
             <div id="sidepanel-list">
-                <button class="sidepanel-buttons" onclick="activateContent()">
+                <button class="sidepanel-buttons active" onclick="activateContent()">
                     <i class="material-symbols-outlined">dashboard</i>
                     <p id="dash">Dashboard</p>
                 </button>
@@ -46,10 +46,12 @@
                     <input type="text" placeholder="search...">
                 </div>
                 <div id="header-icon2" class="header-icons">
+                    <button id="add-blog" class="header-button disappear" onclick="activateAddBlog()"><i class="fa-solid fa-plus"></i></button>
                     <button class="header-button"><i class="fa-solid fa-gear"></i></button> <!-- settings -->
                     <button class="header-button"><i class="fa-solid fa-sliders"></i></button> <!-- settings -->
                     <button id="dropdown" class="header-button"><i class="fa-solid fa-ellipsis-vertical"></i></button> <!-- settings -->
                     <!-- <i class="material-symbols-outlined">apps</i> -->
+
                 </div>
             </div>
 
@@ -271,22 +273,35 @@
                 </div>
             </div>
 
-            <!-- <div id="new-blog">
+            <div id="new-blog">
                 <div id="blog-inner-div">
-                    <div class="input">
-                        <p>Image</p>
-                        <input type="file" id="pic-input">
+                    <p id="new-blog-title">Add blog</p>
+                    <div id="lable-title-div">
+                        <div class="input">
+                            <p class="label">Image</p>
+                            <input type="file" id="file-input">
+                        </div>
+
+                        <!-- <div id="img-input">
+                            <img src="../assets/noprofil.jpg" alt="">
+                            <div id="img-input-div">
+                                <input type="file" id="pic-input">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                        </div> -->
+
+                        <div class="input">
+                            <p class="label">Title</p>
+                            <input type="text" id="input-title">
+                        </div>
                     </div>
-                    <div class="input">
-                        <p>Title</p>
-                        <input type="text">
-                    </div>
-                    <div id="input">
-                        <p>Content</p>
+                    <div id="rich-text">
+                        <p class="label">Content</p>
                         <textarea name="textarea" id="default" cols="30" rows="10"></textarea>
                     </div>
+                    <button id="submit-new-blog">Add</button>
                 </div>
-            </div> -->
+            </div>
 
         </div>
     </div>
