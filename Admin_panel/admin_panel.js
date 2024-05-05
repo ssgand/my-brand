@@ -37,7 +37,7 @@ tinymce.init({
     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
     // tinycomments_mode: 'embedded',
     // tinycomments_author: 'Author name',
-    height: 250,
+    height: 300,
     width: 700,
     mergetags_list: [
       { value: 'First.Name', title: 'First Name' },
@@ -86,6 +86,7 @@ function activateContent () {
     blogs.style.display = 'none'
     querries.style.display = 'none'
     content.style.display = 'flex'
+    newBlog.style.display = 'none'
     addBlog.classList.add('disappear')
 }
 
@@ -93,6 +94,7 @@ function activateBlogs () {
     blogs.style.display = 'flex'
     querries.style.display = 'none'
     content.style.display = 'none'
+    newBlog.style.display = 'none'
     addBlog.classList.remove('disappear')
 }
 
@@ -100,6 +102,7 @@ function activateQuerries () {
     blogs.style.display = 'none'
     querries.style.display = 'flex'
     content.style.display = 'none'
+    newBlog.style.display = 'none'
     addBlog.classList.add('disappear')
 }
 
@@ -116,3 +119,4 @@ function activateAddBlog () {
         console.log('Image ----> ', image)
     })
 // }
+

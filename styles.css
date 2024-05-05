@@ -42,16 +42,18 @@ input {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 600px;
-    /* height: auto; */
+    /* height: 600px; */
+    height: auto;
 }
 
 #home-header {
-    flex: 0.5;
+    /* flex: 0.5; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 50px;
+    position: fixed;
     /* padding: 5px 40px; */
     /* background-color: bisque; */
 }
