@@ -4,76 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/sidepanel.css">
+    <link rel="stylesheet" href="./styles/home-page.css">
+    <link rel="stylesheet" href="./styles/about-page.css">
+    <link rel="stylesheet" href="./styles/skills-page.css">
+    <link rel="stylesheet" href="./styles/works-page.css">
+    <link rel="stylesheet" href="./styles/blogs-page.css">
+    <link rel="stylesheet" href="./styles/contact-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="home-page">
-
-        <div id="home-header">
-            <p id="home1"><span>&lt;C/></span>Steve Gandhi</p>
-            <div id="home2">
-                    <a href="">Home</a>
-                    <a href="">Blogs</a>
-                <div id="home-header-input">
+    <div class="header-container">
+        <div class="header-main">
+            <div id="header">
+                <p><span>&lt;C/></span>Steve Gandhi</p>
+                <div id="home2">
+                    <a href="#">Home</a>
+                    <a href="#">Blogs</a>
+                    <div class="header-input">
+                        <input type="text">
+                        <button id="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <button onclick="onOpenInput()" id="input-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                    </button>
+                    <button onclick="onCancelInput()" id="cancel-button">
+                        <i class="fa-solid fa-xmark"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                    </button>
+                </div>
+            </div>
+            <div class="other-input">
+                <div class="header-input small-input">
                     <input type="text">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <a href=""><span><i class="fa-brands fa-instagram"></i></span></a>
-                <a href=""><span><i class="fa-brands fa-discord"></i></span></a>
-                <a href=""><span><i class="fa-brands fa-github"></i></span></a>
             </div>
         </div>
+        <div class="header-socials">
+            <a href="#" class="social-icons"><span><i class="fa-brands fa-instagram"></i></span></a>
+            <a href="#" class="social-icons"><span><i class="fa-brands fa-discord"></i></span></a>
+            <a href="#" class="social-icons"><span><i class="fa-brands fa-github"></i></span></a>
+        </div>
+    </div>
+    
+    
 
-        <div id="home-body">
-            <div id="home-sidepanel">
-                <div id="home-sidepanel-icons">
-                    <!-- <a href=""><span id="home-sidepanel-icon"></span></a> -->
-                    <a href=""><span id="home-sidepanel-icon"><i class="fa-regular fa-user"></i></span></a>
-                    <a href=""><span id="home-sidepanel-icon"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></span></a>
-                    <a href=""><span id="home-sidepanel-icon"><i class="fa-solid fa-desktop"></i></span></a>
-                    <a href=""><span id="home-sidepanel-icon"><i class="fa-regular fa-pen-to-square"></i></span></a>
-                    <a href=""><span id="home-sidepanel-icon"><i class="fa-regular fa-envelope"></i></span></a>
+    <div id="home-page" class="page">
+
+        <!-- <div id="home-body"> -->
+            <div id="sidepanel">
+                <div id="sidepanel-icons">
+                    <a href="#home-page" data-target="p0" class="a1 active-anchor anchor"><i class="bi bi-columns-gap"></i></a>
+                    <a href="#about-page" data-target="p1" class="anchor a2"><i class="fa-regular fa-user"></i></a>
+                    <a href="#skills-page" data-target="p2" class="anchor a3"><i class="fa-solid fa-desktop"></i></a>
+                    <a href="#works-page" data-target="p3" class="anchor a4"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#blogs-page" data-target="p4" class="anchor a5"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#contact-page" data-target="p5" class="anchor a6"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <div id="sidepanel-description">
+                    <p id="p0">Introduction</p>
+                    <p id="p1">About Me</p>
+                    <p id="p2">Skills</p>
+                    <p id="p3">Works</p>
+                    <p id="p4">Blogs</p>
+                    <p id="p5">Contact</p>
                 </div>
             </div>
+
             <div id="home-content">
-                <h1 id="home-content-title">Developer</h1>
                 <div id="home-content-body">
 
                     <div id="home-content1">
                         <div id="home-content-mid">
                             <div id="home-content11">
                                 <img id="image1" src="./assets/PHOTO_45.JPG" alt="">
-                                <h1 id="home-name">Steve Gandhi</h1>
-                                <p>Full-Stack developer</p>
-                                <div id="home-personal-info">
-                                    <p><span><i class="fa-solid fa-envelope"></i></span> sstevegandhi@gmailcom</p>
-                                    <p><span><i class="fa-solid fa-location-dot"></i></span> Rwanda</p>
-                                    <p><span><i class="fa-light fa-briefcase"></i></span> Full-time / Freelancer</p>
-                                    <p><span><i class="fa-solid fa-link"></i></span> WWw.stevegandhi.com</p>
+                                <div>
+                                    <h2>Steve Gandhi</h2>
+                                    <p>Full-Stack developer</p>
+                                    <div id="home-personal-info">
+                                        <div class="icons">
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                            <span><i class="fa-solid fa-location-dot"></i></span>
+                                            <span><i class="fa-light fa-briefcase"></i></span>
+                                            <span><i class="fa-solid fa-link"></i></span>
+                                        </div>
+                                        <div>
+                                            <p>sstevegandhi@gmailcom</p>
+                                            <p>Rwanda</p>
+                                            <p>Full-time/Freelancer</p>
+                                            <p>www.stevegandhi.com</p>
+                                        </div>
+                                    </div>
+                                    <div id="home-content-skills">
+                                        <div class="home-skills">HTML</div>
+                                        <div class="home-skills">CSS</div>
+                                        <div class="home-skills">JS</div>
+                                        <div class="home-skills">REACT</div>
+                                    </div>
+                                    <div id="home-content-cv">
+                                        <p>Download CV <span style="color: black"><i class="fa-solid fa-download"></i></span></p>
+                                    </div>
                                 </div>
-                                <div id="home-content-skills">
-                                    <div class="home-skills">HTML</div>
-                                    <div class="home-skills">CSS</div>
-                                    <div class="home-skills">JS</div>
-                                    <div class="home-skills">REACT</div>
-                                </div>
-                                <div id="home-content-cv">
-                                    <p>Download CV <span style="color: black"><i class="fa-solid fa-download"></i></span></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
 
                     <div id="home-content2">
-                        <h2 id="home-description-title">
-                            Hey<br>
-                            I'm <span>Steve Gandhi</span><br>
-                            Full-Stack Developer<br>
-                        </h2>
-                        <p>I help business grow by crating amazing web experiences. If you're <br>
-                            looking for a developer that likes to get stuff done,
-                        </p>
-                        <h2><span>Let's Talk</span></h2>
+                        <h1><span>Developer</span></h1>
+                        <div>
+                            <h2 id="home-description-title">
+                                Hey<br>
+                                I'm <span>Steve Gandhi</span><br>
+                                Full-Stack Developer<br>
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h3><span>Let's Talk  <a href="#contact-page"><i class="fa-regular fa-envelope"></i></a></span></h3>
+                        </div>
                     </div>
 
                     <div id="home-content-sidepanel" class="home-content-body-child">
@@ -94,41 +146,46 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
 
     </div>
 
-    <div id="about-page">
-        <div id="about-div">
-            <div id="about-info">
-                <div id="about-info-title">
-                    <div id="about-info-title-sub">
-                        <p>About Me</p>
+
+    <div id="about-page" class="page">
+        <img src="./assets/istockphoto-951694328-612x612.jpg" alt="">
+        <div>
+            <div id="about-div">
+                <div id="about-info">
+                    <div id="about-info-title">
+                        <div>
+                            <p>About Me</p>
+                        </div>
+                    </div>
+                    <div id="about-info-content">
+                        <h1><span>Hello!</span></h1>
+                        <p>My name is SEKAMONDO Steve Gandhi and I specialize in web development that<br>
+                            utilizes <span>HTML</span>, <span>CSS</span>, <span>JS</span>, and <span>REACT</span> etc.<br>
+                            <br>
+                            I am a highly motivated individual and eternal optimist dedicated to writing clear,<br>
+                            concise, robust code that works. Striving to never stop learning and improving.<br>
+                            <br>
+                            When I'm not coding, I am <span>writing blogs</span>, reading, or picking up some new hands-on<br>
+                            art project like <span>photography</span>.<br>
+                            <br>
+                            I like to have my perspective and belief systems challenged so that I see the world<br>
+                            through new eyes.
+                        </p>
                     </div>
                 </div>
-                <div id="about-info-content">
-                    <h1><span>Hello!</span></h1>
-                    <p>My name is SEKAMONDO Steve Gandhi and I specialize in web development that<br>
-                        utilizes <span>HTML</span>, <span>CSS</span>, <span>JS</span>, and <span>REACT</span> etc.<br>
-                        <br>
-                        I am a highly motivated individual and eternal optimist dedicated to writing clear,<br>
-                        concise, robust code that works. Striving to never stop learning and improving.<br>
-                        <br>
-                        When I'm not coding, I am <span>writing blogs</span>, reading, or picking up some new hands-on<br>
-                        art project like <span>photography</span>.<br>
-                        <br>
-                        I like to have my perspective and belief systems challenged so that I see the world<br>
-                        through new yeyes.
-                    </p>
+                <div id="about-div-image">
+                    <img src="./assets/16.02.2024_16.36.34_REC.png" alt="" id="about-image">
                 </div>
-            </div>
-            <div id="about-div-image">
-                <img src="./assets/16.02.2024_16.36.34_REC.png" alt="" id="about-image">
             </div>
         </div>
     </div>
+    
 
-    <div id="skills-page">
+    <div id="skills-page" class="page">
         <div id="skills-transparent">
             <div id="skills-div">
 
@@ -181,7 +238,17 @@
         </div>
     </div>
 
-    <div id="works-page">
+
+
+
+
+
+
+
+
+
+
+    <!-- <div id="works-page" class="page">
         <div id="works-transparent">
             <div id="works-div">
 
@@ -209,9 +276,153 @@
 
             </div>
         </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="works-page" class="page">
+        <div id="works-transparent">
+            
+            <div class="carousel">
+                <div class="list">
+                    <div class="item">
+                        <img src="./assets/img1.jpg">
+                        <div class="content">
+                            <div class="author">SOMEONE</div>
+                            <div class="title">DESIGN SLIDER</div>
+                            <div class="topic">WEBSITE</div>
+                            <div class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="buttons">
+                                <button>SEE MORE</button>
+                                <button>SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img2.jpg">
+                        <div class="content">
+                            <div class="author">SOMEONE</div>
+                            <div class="title">DESIGN SLIDER</div>
+                            <div class="topic">WEBSITE</div>
+                            <div class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="buttons">
+                                <button>SEE MORE</button>
+                                <button>SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img3.jpg">
+                        <div class="content">
+                            <div class="author">SOMEONE</div>
+                            <div class="title">DESIGN SLIDER</div>
+                            <div class="topic">WEBSITE</div>
+                            <div class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="buttons">
+                                <button>SEE MORE</button>
+                                <button>SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img4.jpg">
+                        <div class="content">
+                            <div class="author">SOMEONE</div>
+                            <div class="title">DESIGN SLIDER</div>
+                            <div class="topic">WEBSITE</div>
+                            <div class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="buttons">
+                                <button>SEE MORE</button>
+                                <button>SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div class="item">
+                        <img src="./assets/img2.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Name Slider
+                            </div>
+                            <div class="des">
+                                Description
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img3.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Name Slider
+                            </div>
+                            <div class="des">
+                                Description
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img4.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Name Slider
+                            </div>
+                            <div class="des">
+                                Description
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img1.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Name Slider
+                            </div>
+                            <div class="des">
+                                Description
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <div class="time"></div>
+            </div>
+
+
+        </div>
     </div>
 
-    <div id="blogs-page">
+
+
+
+
+
+
+
+
+
+
+    <div id="blogs-page" class="page">
 
         <div id="skills-description">
             <h1><span>Blogs</span></h1>
@@ -249,44 +460,48 @@
         </div>
     </div>
 
-    <div id="contact-page">
+    <div id="contact-page" class="page">
 
-        <div id="skills-description">
-            <h1><span>Contact</span></h1>
-            <div id="skills-draw">
-                <div class="skills-point"></div>
-                <div id="skills-line"></div>
-                <div class="skills-point"></div>
+        <div id="contact-page-content">
+            <div id="skills-description">
+                <h1><span>Contact</span></h1>
+                <div id="skills-draw">
+                    <div class="skills-point"></div>
+                    <div id="skills-line"></div>
+                    <div class="skills-point"></div>
+                </div>
+                <p>I'm currently available for freelance work</p>
             </div>
-            <p>I'm currently available for freelance work</p>
-        </div>
 
-        <div id="contact-content">
-            <div id="contact-content-title"><span>Send Me A Message</span></div>
-            <div id="contact-form">
-                <div id="contact-div-input">
-                    <div id="contact-input1" class='contact-input'>
-                        <label for="name"><span>Your name*</span></label>
-                        <input type="text" name="name" placeholder="Enter your name">
+            <div id="contact-content">
+                <div id="contact-content-title"><span>Send Me A Message</span></div>
+                <div id="contact-form">
+                    <div id="contact-div-input">
+                        <div id="contact-input1" class='contact-input'>
+                            <label for="name"><span>Your name*</span></label>
+                            <input type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div id="contact-input2" class="contact-input">
+                            <label for="email"><span>Your email*</span></label>
+                            <input type="email" name="email" placeholder="Enter your email">
+                        </div>
                     </div>
-                    <div id="contact-input2" class="contact-input">
-                        <label for="email"><span>Your email*</span></label>
-                        <input type="email" name="email" placeholder="Enter your email">
+                    <div class="contact-input">
+                        <label for="message"><span>Your message*</span></label>
+                        <textarea rows="4" name="message" type="text" name="message" placeholder="Enter your message"></textarea>
                     </div>
                 </div>
-                <div class="contact-input">
-                    <label for="message"><span>Your message*</span></label>
-                    <input type="text" name="message" placeholder="Enter your needs">
-                </div>
+                <button>Send Message <i class="fa-regular fa-paper-plane"></i></button>
             </div>
-            <button id="contact-button">Send Message <i class="fa-regular fa-paper-plane"></i></button>
         </div>
 
         <div id="contact-footer">
-            <p>© 2023 stevegandhi. All rights reserved.</p>
-            <div>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
+            <div id="contact-footer-content">
+                <p>© 2023 stevegandhi. All rights reserved.</p>
+                <div>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
             </div>
             <div id="contact-footer-links">
                 <a href=""><span><i class="fa-brands fa-instagram"></i></span></a>
@@ -295,9 +510,12 @@
             </div>
             <p>Design by <a href=""><span>JohannLean</span></a></p>
         </div>
+
     </div>
     
     <script src="https://kit.fontawesome.com/d5bfaad316.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./scripts/sidepanel.js"></script>
+    <script src="./scripts/works-page.js"></script>
 </body>
 </html>
