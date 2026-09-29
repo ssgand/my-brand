@@ -1,0 +1,122 @@
+.header-container {
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #292F36;
+    position: fixed;
+    z-index: 50;
+}
+
+.header-main {
+    width: 100%;
+}
+
+#header {
+    /* flex: 0.5; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:gold; */
+}
+
+.header-socials {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    /* background-color: green; */
+    padding: 3px 0px;
+    gap: 15%;
+    font-size: 15px;
+}
+
+#header p {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding:  0px 5%;
+    /* background-color: blue; */
+    color: white;
+}
+
+#header span {
+    margin-left: 5px;
+}
+
+#home2 {
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    /* background-color: grey; */
+}
+
+#home2 a {
+    padding: 2px 7px;
+    border-radius: 20px;
+}
+
+#home2 a:hover {
+    background-color: #3c495a;
+    color: #12F7D6;
+}
+
+.social-icons {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.header-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 20px;
+    color: black
+}
+
+.header-input #submit {
+    color: black;
+}
+
+#header button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    border: 0;
+}
+
+.other-input {
+    display: none;
+    justify-content: flex-end;
+    /* padding-right: 20px; */
+    /* background-color: blue; */
+}
+
+.small-input {
+    margin: 5px 0px;
+}
+
+#header #cancel-button {
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    display: none;
+}
+
+#header #cancel-button:hover {
+    background-color: #989797;
+    /* color: white; */
+}

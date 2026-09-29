@@ -1,0 +1,109 @@
+
+#blogs-page {
+    /* height: 600px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #292F36;
+    gap: 7%;
+}
+
+#blogs-page h1 {
+    font-size: 50px;
+}
+
+#blogs-page #skills-draw {
+    width: 50%;
+}
+
+#blogs-content-footer span {
+    font-size: 13px;
+    color: white
+}
+
+#blogs-content {
+    width: 70%;
+    display: flex;
+    gap: 5%;
+    color: white;
+    justify-content: center;
+    padding: 50px 0px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#blogs-image-div {
+    width: 30%
+}
+
+#blogs-image {
+    width: 100%;
+    height: auto;
+}
+
+#blogs-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#blogs-readMore {
+    /* background-color: grey; */
+    width: fit-content;
+    padding: 5px 0px;
+    border-bottom: 1px solid white;
+}
+
+#blogs-content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#blogs-footer1 {
+    background-color: #43454D;
+    padding: 5px 5px;
+    border-radius: 20px;
+}
+
+#blogs-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+}
+
+.blogs-button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 1px solid #12F7D6
+}
+
+#blogs-button1 {
+    background-color: #12F7D6;
+}
+
+#blogs-button2 {
+    background-color: #292F36;
+    color: white;
+}
+
+@media only screen and (max-width: 700px){
+    #blogs-page {
+        padding: 25px 0px;
+    }
+
+    #blogs-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px
+    }
+
+    #blogs-image {
+        width: 100%;
+        height: auto;
+    }
+}

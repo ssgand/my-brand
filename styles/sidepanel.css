@@ -1,0 +1,73 @@
+#sidepanel {
+    /* background-color: green; */
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    top: 0;
+    margin: 110px 0px 0px 30px;
+    gap: 10px
+}
+
+#sidepanel-icons {
+    background-color: #1A1E23;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    /* margin: 50px 0px 0px 0px; */
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+#sidepanel-icons a {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidepanel-icons a:hover {
+    background-color: white;
+    color: black
+}
+
+#sidepanel-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+
+#sidepanel-description p {
+    background-color: white;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight:var(200);
+    border-radius: 10px;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: opacity 2.5s ease;
+}
+
+#sidepanel-description .no-bg {
+    background-color: transparent;
+}
+
+#sidepanel-description .hover-p {
+    /* visibility: visible; */
+    opacity: 1;
+    transition: opacity 3s ease;
+}
+
+#sidepanel-icons .active-anchor {
+    background-color: white;
+    color: black
+}
